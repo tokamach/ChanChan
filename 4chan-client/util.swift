@@ -124,4 +124,9 @@ struct ChanCatalog
             })
         })
     }
+    
+    //lel
+    init() {
+        pages = [[]]
+    }
 }

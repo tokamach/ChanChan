@@ -10,63 +10,49 @@ import Cocoa
 
 class ThreadListViewController: NSViewController {
 
+    @IBOutlet weak var tableView: NSTableView!
+    
+    var threadList: ChanCatalog?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
-    }
-    
-}
-
-extension ThreadListViewController: NSOutlineViewDataSource
-{
-    func outlineView(_ outlineView: NSOutlineView, numberOfChildrenOfItem item: Any?) -> Int {
-        return 0
-    }
-    
-    func outlineView(_ outlineView: NSOutlineView, child index: Int, ofItem item: Any?) -> Any {
-        if let thread = item as? ChanThread
-        {
-            return thread.posts[index]
-        }
-        
-        var r = ChanThread()
-        ChanHelper.loadCatalog(board: "c", completionHandler: { res in
-            let id = res.pages[0][0].number
-            ChanHelper.loadThread(board: "c", threadID: id, completionHandler: { res in
-                r = res
-            })
+        ChanHelper.loadCatalog(board: "c", completionHandler: { req in
+            self.threadList = req
+            self.tableView.delegate = self
+            self.tableView.dataSource = self
         })
-        
-        return r
-        
-    }
-    
-    func outlineView(_ outlineView: NSOutlineView, isItemExpandable item: Any) -> Bool {
-        if let thread = item as? ChanThread
-        {
-            //return thread.posts.count > 0
-            return false
-        }
-        
-        return false
     }
 }
 
-extension ThreadListViewController: NSOutlineViewDelegate
+extension ThreadListViewController: NSTableViewDataSource
 {
-    func outlineView(_ outlineView: NSOutlineView, viewFor tableColumn: NSTableColumn?, item: Any) -> NSView?
-    {
-        var view: NSTableCellView?
-        
-        if let thread = item as? ChanThread {
-            view = outlineView.make(withIdentifier: "ThreadCell", owner: self) as? NSTableCellView
-            
-            if let textField = view?.textField {
-                textField.stringValue = thread.posts[0].subject
-                textField.sizeToFit()
-            }
+    func numberOfRows(in tableView: NSTableView) -> Int {
+        if (self.threadList!.pages.count > 0)
+        {
+            return self.threadList!.pages[0].count
+        }
+        else
+        {
+            return 0
+        }
+    }
+}
+
+extension ThreadListViewController: NSTableViewDelegate
+{
+    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
+        guard (threadList?.pages[0][row]) != nil else
+        {
+            return nil
         }
         
-        return view
+        if let cell = tableView.make(withIdentifier: "ThreadCellID", owner: nil) as? NSTableCellView
+        {
+            cell.textField?.stringValue = threadList!.pages[0][row].subject
+            return cell
+        }
+        
+        return nil
     }
 }
