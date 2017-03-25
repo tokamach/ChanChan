@@ -61,6 +61,9 @@ struct ChanPost
     let thumbWidth: NSNumber;
     let thumbHeight: NSNumber;
     
+    //catalog stuff
+    let lastReplies: Array<ChanPost>?
+    
     let content: String;
     
     init(fromJSON postJSON: JSON)
@@ -84,6 +87,8 @@ struct ChanPost
         thumbWidth = postJSON["tn_w"].numberValue;
         
         content = postJSON["com"].stringValue; //needs conditional
+        
+        lastReplies = nil
     }
 }
 
@@ -112,9 +117,11 @@ struct ChanCatalog
     
     init(fromJSON catJSON: JSON)
     {
-        pages = [[]]
-        pages[0] = catJSON[0]["threads"].arrayValue.map({
-            ChanPost(fromJSON: $0)
+        //ＦＵＮＣＴＩＯＮＡＬ ＰＲＯＧＲＡＭＭＩＮＧ
+        pages = catJSON.arrayValue.map({
+            $0["threads"].arrayValue.map({
+                ChanPost(fromJSON: $0)
+            })
         })
     }
 }
