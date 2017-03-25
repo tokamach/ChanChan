@@ -12,7 +12,7 @@ import SwiftyJSON
 
 struct ChanHelper
 {
-    func loadCatalog(board: String, completionHandler: @escaping (ChanCatalog) -> Void)
+    static func loadCatalog(board: String, completionHandler: @escaping (ChanCatalog) -> Void)
     {
         let url = "https://a.4cdn.org/\(board)/catalog.json"
         Alamofire.request(url).validate().responseJSON {response in
@@ -25,7 +25,7 @@ struct ChanHelper
         }
     }
     
-    func loadThread(board: String, threadID: NSNumber, completionHandler: @escaping (ChanThread) -> Void)
+    static func loadThread(board: String, threadID: NSNumber, completionHandler: @escaping (ChanThread) -> Void)
     {
         let url = "https://a.4cdn.org/\(board)/thread/\(threadID).json"
         Alamofire.request(url, method: .get).validate().responseJSON { response in

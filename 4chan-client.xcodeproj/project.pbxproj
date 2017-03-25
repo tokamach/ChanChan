@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E0A4B837D3011856239E5A8C /* Pods_4chan_client.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD21FCE3A6B8DA462333C8E5 /* Pods_4chan_client.framework */; };
 		E2986B601E85E2BA009DC792 /* util.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2986B5F1E85E2BA009DC792 /* util.swift */; };
+		E2B5686B1E87224A00A9EEBE /* ThreadListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B5686A1E87224A00A9EEBE /* ThreadListViewController.swift */; };
 		E2ED9D371E85D49900B49B61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ED9D361E85D49900B49B61 /* AppDelegate.swift */; };
 		E2ED9D391E85D49900B49B61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ED9D381E85D49900B49B61 /* ViewController.swift */; };
 		E2ED9D3B1E85D49900B49B61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2ED9D3A1E85D49900B49B61 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 		BD21FCE3A6B8DA462333C8E5 /* Pods_4chan_client.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_4chan_client.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7664B7F5D605150F6C297CD /* Pods-4chan-client.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-4chan-client.debug.xcconfig"; path = "Pods/Target Support Files/Pods-4chan-client/Pods-4chan-client.debug.xcconfig"; sourceTree = "<group>"; };
 		E2986B5F1E85E2BA009DC792 /* util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = util.swift; sourceTree = "<group>"; };
+		E2B5686A1E87224A00A9EEBE /* ThreadListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadListViewController.swift; sourceTree = "<group>"; };
 		E2ED9D331E85D49900B49B61 /* 4chan-client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "4chan-client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2ED9D361E85D49900B49B61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2ED9D381E85D49900B49B61 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +59,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E2B568691E8721DE00A9EEBE /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E2B5686A1E87224A00A9EEBE /* ThreadListViewController.swift */,
+			);
+			name = controllers;
+			sourceTree = "<group>";
+		};
 		E2ED9D2A1E85D49900B49B61 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +90,7 @@
 			children = (
 				E2ED9D381E85D49900B49B61 /* ViewController.swift */,
 				E2ED9D361E85D49900B49B61 /* AppDelegate.swift */,
+				E2B568691E8721DE00A9EEBE /* controllers */,
 				E2986B5F1E85E2BA009DC792 /* util.swift */,
 				E2ED9D3A1E85D49900B49B61 /* Assets.xcassets */,
 				E2ED9D3C1E85D49900B49B61 /* Main.storyboard */,
@@ -210,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2B5686B1E87224A00A9EEBE /* ThreadListViewController.swift in Sources */,
 				E2986B601E85E2BA009DC792 /* util.swift in Sources */,
 				E2ED9D391E85D49900B49B61 /* ViewController.swift in Sources */,
 				E2ED9D371E85D49900B49B61 /* AppDelegate.swift in Sources */,
