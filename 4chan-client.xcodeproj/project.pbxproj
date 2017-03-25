@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E0A4B837D3011856239E5A8C /* Pods_4chan_client.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD21FCE3A6B8DA462333C8E5 /* Pods_4chan_client.framework */; };
+		E2986B601E85E2BA009DC792 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2986B5F1E85E2BA009DC792 /* Post.swift */; };
 		E2ED9D371E85D49900B49B61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ED9D361E85D49900B49B61 /* AppDelegate.swift */; };
 		E2ED9D391E85D49900B49B61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ED9D381E85D49900B49B61 /* ViewController.swift */; };
 		E2ED9D3B1E85D49900B49B61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2ED9D3A1E85D49900B49B61 /* Assets.xcassets */; };
@@ -14,6 +16,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B83C8A3D88D37C70759DAFD /* Pods-4chan-client.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-4chan-client.release.xcconfig"; path = "Pods/Target Support Files/Pods-4chan-client/Pods-4chan-client.release.xcconfig"; sourceTree = "<group>"; };
+		BD21FCE3A6B8DA462333C8E5 /* Pods_4chan_client.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_4chan_client.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7664B7F5D605150F6C297CD /* Pods-4chan-client.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-4chan-client.debug.xcconfig"; path = "Pods/Target Support Files/Pods-4chan-client/Pods-4chan-client.debug.xcconfig"; sourceTree = "<group>"; };
+		E2986B5F1E85E2BA009DC792 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		E2ED9D331E85D49900B49B61 /* 4chan-client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "4chan-client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2ED9D361E85D49900B49B61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2ED9D381E85D49900B49B61 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -27,17 +33,45 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0A4B837D3011856239E5A8C /* Pods_4chan_client.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4ED99413C73FCA40AFE995C9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BD21FCE3A6B8DA462333C8E5 /* Pods_4chan_client.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC951AA01F7492FDCB9A8ED2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D7664B7F5D605150F6C297CD /* Pods-4chan-client.debug.xcconfig */,
+				9B83C8A3D88D37C70759DAFD /* Pods-4chan-client.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E2986B611E85E2C7009DC792 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				E2986B5F1E85E2BA009DC792 /* Post.swift */,
+			);
+			name = util;
+			sourceTree = "<group>";
+		};
 		E2ED9D2A1E85D49900B49B61 = {
 			isa = PBXGroup;
 			children = (
 				E2ED9D351E85D49900B49B61 /* 4chan-client */,
 				E2ED9D341E85D49900B49B61 /* Products */,
+				BC951AA01F7492FDCB9A8ED2 /* Pods */,
+				4ED99413C73FCA40AFE995C9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,6 +86,7 @@
 		E2ED9D351E85D49900B49B61 /* 4chan-client */ = {
 			isa = PBXGroup;
 			children = (
+				E2986B611E85E2C7009DC792 /* util */,
 				E2ED9D361E85D49900B49B61 /* AppDelegate.swift */,
 				E2ED9D381E85D49900B49B61 /* ViewController.swift */,
 				E2ED9D3A1E85D49900B49B61 /* Assets.xcassets */,
@@ -68,9 +103,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E2ED9D421E85D49900B49B61 /* Build configuration list for PBXNativeTarget "4chan-client" */;
 			buildPhases = (
+				D4881A15EADFE2E46740BC0D /* [CP] Check Pods Manifest.lock */,
 				E2ED9D2F1E85D49900B49B61 /* Sources */,
 				E2ED9D301E85D49900B49B61 /* Frameworks */,
 				E2ED9D311E85D49900B49B61 /* Resources */,
+				8D0AE6D6964ADBA4996C3739 /* [CP] Embed Pods Frameworks */,
+				714243D883B7910E1481EBE4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -127,11 +165,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		714243D883B7910E1481EBE4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-4chan-client/Pods-4chan-client-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8D0AE6D6964ADBA4996C3739 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-4chan-client/Pods-4chan-client-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4881A15EADFE2E46740BC0D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E2ED9D2F1E85D49900B49B61 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2986B601E85E2BA009DC792 /* Post.swift in Sources */,
 				E2ED9D391E85D49900B49B61 /* ViewController.swift in Sources */,
 				E2ED9D371E85D49900B49B61 /* AppDelegate.swift in Sources */,
 			);
@@ -243,6 +330,7 @@
 		};
 		E2ED9D431E85D49900B49B61 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7664B7F5D605150F6C297CD /* Pods-4chan-client.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -256,6 +344,7 @@
 		};
 		E2ED9D441E85D49900B49B61 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B83C8A3D88D37C70759DAFD /* Pods-4chan-client.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -286,6 +375,7 @@
 				E2ED9D441E85D49900B49B61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
