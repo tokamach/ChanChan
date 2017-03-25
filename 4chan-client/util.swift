@@ -8,10 +8,28 @@
 
 import Foundation
 import Alamofire
+import AlamofireImage
 import SwiftyJSON
 
 struct ChanHelper
 {
+    
+    static func loadImage(board: String, time: String, ext: String, completionHandler: @escaping (NSImage) -> Void)
+    {
+        let url = "https://i.4cdn.org/\(board)/\(time)\(ext)"
+        print(url)
+        Alamofire.request(url).validate().responseImage(completionHandler: { response in
+            switch response.result
+            {
+            case .success(let value):
+                print(value)
+                completionHandler(value)
+            case .failure(let error):
+                print (error)
+            }
+        })
+    }
+    
     static func loadCatalog(board: String, completionHandler: @escaping (ChanCatalog) -> Void)
     {
         let url = "https://a.4cdn.org/\(board)/catalog.json"
@@ -43,23 +61,24 @@ struct ChanHelper
 struct ChanPost
 {
     //post details
-    let number: NSNumber;
-    let time: String;
-    let resTo: NSNumber;
+    let number: NSNumber
+    let time: String
+    let date: String
+    let resTo: NSNumber
     
-    let name: String;
-    let subject: String;
-    let trip: String;
+    let name: String
+    let subject: String
+    let trip: String
     
     //file details
-    let fileName: String;
-    let fileExt: String;
-    let fileMD5: String;
-    let fileSize: NSNumber;
-    let fileWidth: NSNumber;
-    let fileHeight: NSNumber;
-    let thumbWidth: NSNumber;
-    let thumbHeight: NSNumber;
+    let fileName: String
+    let fileExt: String
+    let fileMD5: String
+    let fileSize: NSNumber
+    let fileWidth: NSNumber
+    let fileHeight: NSNumber
+    let thumbWidth: NSNumber
+    let thumbHeight: NSNumber
     
     //catalog stuff
     let lastReplies: Array<ChanPost>?
@@ -68,25 +87,26 @@ struct ChanPost
     
     init(fromJSON postJSON: JSON)
     {
-        number = postJSON["no"].numberValue;
-        time = postJSON["now"].stringValue;
-        resTo = postJSON["resTo"].numberValue; //needs conditional
+        number = postJSON["no"].numberValue
+        time = postJSON["tim"].stringValue
+        date = postJSON["now"].stringValue
+        resTo = postJSON["resTo"].numberValue //needs conditional
         
-        name = postJSON["name"].stringValue;
-        subject = postJSON["sub"].stringValue; //needs conditional
-        trip = postJSON["trip"].stringValue; //needs conditional
+        name = postJSON["name"].stringValue
+        subject = postJSON["sub"].stringValue //needs conditional
+        trip = postJSON["trip"].stringValue //needs conditional
         
         // all file stuff needs conditional
-        fileName = postJSON["filename"].stringValue;
-        fileExt = postJSON["ext"].stringValue;
-        fileMD5 = postJSON["md5"].stringValue;
-        fileSize = postJSON["fsize"].numberValue;
-        fileHeight = postJSON["h"].numberValue;
-        fileWidth = postJSON["w"].numberValue;
-        thumbHeight = postJSON["tn_h"].numberValue;
-        thumbWidth = postJSON["tn_w"].numberValue;
+        fileName = postJSON["filename"].stringValue
+        fileExt = postJSON["ext"].stringValue
+        fileMD5 = postJSON["md5"].stringValue
+        fileSize = postJSON["fsize"].numberValue
+        fileHeight = postJSON["h"].numberValue
+        fileWidth = postJSON["w"].numberValue
+        thumbHeight = postJSON["tn_h"].numberValue
+        thumbWidth = postJSON["tn_w"].numberValue
         
-        content = postJSON["com"].stringValue; //needs conditional
+        content = postJSON["com"].stringValue //needs conditional
         
         lastReplies = nil
     }

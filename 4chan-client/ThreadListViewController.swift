@@ -7,6 +7,8 @@
 //
 
 import Cocoa
+import Alamofire
+import AlamofireImage
 
 class ThreadListViewController: NSViewController {
 
@@ -22,6 +24,10 @@ class ThreadListViewController: NSViewController {
             self.tableView.delegate = self
             self.tableView.dataSource = self
         })
+    }
+    
+    func tableView(_ tableView: NSTableView, heightOfRow row: Int) -> CGFloat {
+        return 80
     }
 }
 
@@ -47,9 +53,17 @@ extension ThreadListViewController: NSTableViewDelegate
             return nil
         }
         
-        if let cell = tableView.make(withIdentifier: "ThreadCellID", owner: nil) as? NSTableCellView
+        if let cell = tableView.make(withIdentifier: "ThreadCellID", owner: nil) as? ThreadTableCellView
         {
             cell.textField?.stringValue = threadList!.pages[0][row].subject
+            
+            ChanHelper.loadImage(board: "c",
+                                 time: threadList!.pages[0][row].time,
+                                 ext: threadList!.pages[0][row].fileExt,
+                                 completionHandler: { res in
+                cell.previewImageView?.image = res
+            })
+            
             return cell
         }
         

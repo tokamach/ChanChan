@@ -10,10 +10,12 @@ import Cocoa
 
 class ThreadTableCellView: NSTableCellView {
 
+    @IBOutlet weak var previewImageView: NSImageView!
+    
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
 
         // Drawing code here.
-    }
+        }
     
 }
