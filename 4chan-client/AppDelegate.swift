@@ -16,17 +16,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
         
-        Alamofire.request("https://a.4cdn.org/c/thread/2863466.json", method: .get).validate().responseJSON { response in
-            switch response.result {
-            case .success(let value):
-                let json = JSON(value)
-                let testThread = ChanThread(fromJSON: json)
-                print(json["posts"][0]["sub"])
-                print(testThread.posts[0].time);
-            case .failure(let error):
-                print(error)
-            }
-        }
+        let ch = ChanHelper.init();
+        /*ch.loadThread(board: "c", threadID: 2863466, completionHandler: { res in
+            print(res.posts[0].subject)
+        })*/
+        
+        ch.loadCatalog(board: "c", completionHandler: { res in
+            print(res.posts[0].content)
+        })
         
     }
 

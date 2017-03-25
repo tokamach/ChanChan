@@ -9,30 +9,46 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "4chan-client/AppDelegate.swift"
-            timestampString = "512129316.372718"
+            filePath = "4chan-client/util.swift"
+            timestampString = "512157715.696903"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "applicationDidFinishLaunching(_:)"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "loadThread(board:threadID:completionHandler:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "4chan-client/AppDelegate.swift"
-            timestampString = "512129316.372718"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "applicationDidFinishLaunching(_:)"
-            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_chan_client.ChanHelper.(loadThread (board : Swift.String, threadID : __ObjC.NSNumber) -&gt; ()).(closure #1)"
+                  moduleName = "4chan-client"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tom/code/xcode/4chan-client/4chan-client/util.swift"
+                  timestampString = "512154982.256953"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "1336">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_chan_client.ChanHelper.(loadThread (board : Swift.String, threadID : __ObjC.NSNumber) -&gt; ()).(closure #1)"
+                  moduleName = "4chan-client"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tom/code/xcode/4chan-client/4chan-client/util.swift"
+                  timestampString = "512154982.259097"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "1392">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

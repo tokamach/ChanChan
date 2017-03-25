@@ -1,5 +1,5 @@
 //
-//  post.swift
+//  util.swift
 //  4chan-client
 //
 //  Created by Tom Hutchings on 24/03/2017.
@@ -10,10 +10,51 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
+struct ChanHelper
+{
+    func loadCatalog(board: String, completionHandler: @escaping (ChanThread) -> Void)
+    {
+        let url = "https://a.4cdn.org/\(board)/catalog.json"
+        Alamofire.request(url).validate().responseJSON {response in
+            switch response.result {
+            case .success(let value):
+                completionHandler(ChanThread(fromJSON: JSON(value)[0]["threads"]))
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
+    func loadThread(board: String, threadID: NSNumber, completionHandler: @escaping (ChanThread) -> Void)
+    {
+        let url = "https://a.4cdn.org/\(board)/thread/\(threadID).json"
+        Alamofire.request(url, method: .get).validate().responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                completionHandler(ChanThread(fromJSON: JSON(value)))
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+}
+
 // A thread on 4chan
 struct ChanThread
 {
     let posts: Array<ChanPost>;
+    
+    init()
+    {
+        posts = []
+    }
+    
+    init(fromCatalogJSON catJSON: JSON)
+    {
+        posts = catJSON["threads"].arrayValue.map({
+            ChanPost(fromJSON: $0)
+        })
+    }
     
     init(fromJSON threadJSON: JSON)
     {
