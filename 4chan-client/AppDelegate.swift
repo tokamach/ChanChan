@@ -22,7 +22,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         })*/
         
         ch.loadCatalog(board: "c", completionHandler: { res in
-            print(res.posts[0].content)
+            print(res.pages[0][0].subject)
         })
         
     }

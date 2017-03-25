@@ -12,13 +12,13 @@ import SwiftyJSON
 
 struct ChanHelper
 {
-    func loadCatalog(board: String, completionHandler: @escaping (ChanThread) -> Void)
+    func loadCatalog(board: String, completionHandler: @escaping (ChanCatalog) -> Void)
     {
         let url = "https://a.4cdn.org/\(board)/catalog.json"
         Alamofire.request(url).validate().responseJSON {response in
             switch response.result {
             case .success(let value):
-                completionHandler(ChanThread(fromJSON: JSON(value)[0]["threads"]))
+                completionHandler(ChanCatalog(fromJSON: JSON(value)))
             case .failure(let error):
                 print(error)
             }
@@ -36,31 +36,6 @@ struct ChanHelper
                 print(error)
             }
         }
-    }
-}
-
-// A thread on 4chan
-struct ChanThread
-{
-    let posts: Array<ChanPost>;
-    
-    init()
-    {
-        posts = []
-    }
-    
-    init(fromCatalogJSON catJSON: JSON)
-    {
-        posts = catJSON["threads"].arrayValue.map({
-            ChanPost(fromJSON: $0)
-        })
-    }
-    
-    init(fromJSON threadJSON: JSON)
-    {
-        posts = threadJSON["posts"].arrayValue.map({
-            ChanPost(fromJSON: $0)
-        });
     }
 }
 
@@ -107,7 +82,39 @@ struct ChanPost
         fileWidth = postJSON["w"].numberValue;
         thumbHeight = postJSON["tn_h"].numberValue;
         thumbWidth = postJSON["tn_w"].numberValue;
-
+        
         content = postJSON["com"].stringValue; //needs conditional
+    }
+}
+
+// A thread on 4chan
+struct ChanThread
+{
+    let posts: Array<ChanPost>;
+    
+    init()
+    {
+        posts = []
+    }
+    
+    init(fromJSON threadJSON: JSON)
+    {
+        posts = threadJSON["posts"].arrayValue.map({
+            ChanPost(fromJSON: $0)
+        });
+    }
+}
+
+//fucking guess
+struct ChanCatalog
+{
+    var pages: Array<Array<ChanPost>>
+    
+    init(fromJSON catJSON: JSON)
+    {
+        pages = [[]]
+        pages[0] = catJSON[0]["threads"].arrayValue.map({
+            ChanPost(fromJSON: $0)
+        })
     }
 }
