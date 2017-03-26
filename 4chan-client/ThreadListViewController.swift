@@ -21,12 +21,6 @@ class ThreadListViewController: NSViewController {
     @IBAction func loadButtonPressed(_ sender: Any) {
         currentBoard = boardTextField.stringValue
         reloadCatalog()
-        print(currentBoard)
-        print(threadList?.pages[0][0].subject)
-        DispatchQueue.main.async{
-            self.tableView.reloadData()
-        }
-
     }
     
     func reloadCatalog()
@@ -35,7 +29,11 @@ class ThreadListViewController: NSViewController {
             self.threadList = req
             self.tableView.delegate = self
             self.tableView.dataSource = self
+            DispatchQueue.main.async
+            {
+                self.tableView.reloadData()
 
+            }
         })
     }
     
@@ -68,7 +66,7 @@ extension ThreadListViewController: NSTableViewDataSource
 extension ThreadListViewController: NSTableViewDelegate
 {
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
-        guard (threadList?.pages[0][row]) != nil else
+        guard (threadList!.pages.count > 0) else
         {
             return nil
         }

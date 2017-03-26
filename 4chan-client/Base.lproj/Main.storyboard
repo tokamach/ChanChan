@@ -211,15 +211,15 @@
                                 <rect key="frame" x="0.0" y="0.0" width="884" height="487"/>
                                 <subviews>
                                     <splitView fixedFrame="YES" arrangesAllSubviews="NO" dividerStyle="thin" id="jqg-dG-74D">
-                                        <rect key="frame" x="0.0" y="0.0" width="254.5" height="487"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="255" height="487"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <subviews>
                                             <customView fixedFrame="YES" id="bta-Zh-Zwk">
-                                                <rect key="frame" x="0.0" y="0.0" width="254.5" height="60.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="255" height="61"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <subviews>
                                                     <textField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TSy-LV-3TP">
-                                                        <rect key="frame" x="20" y="20" width="96" height="22"/>
+                                                        <rect key="frame" x="20" y="20.5" width="96" height="22"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="NHl-zC-L11">
                                                             <font key="font" metaFont="system"/>
@@ -228,7 +228,7 @@
                                                         </textFieldCell>
                                                     </textField>
                                                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B7O-sz-RRX">
-                                                        <rect key="frame" x="153" y="14" width="70" height="32"/>
+                                                        <rect key="frame" x="153" y="14.5" width="70" height="32"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="push" title="Load" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wWW-gj-ibl">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -241,17 +241,17 @@
                                                 </subviews>
                                             </customView>
                                             <scrollView wantsLayer="YES" fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="83" horizontalPageScroll="10" verticalLineScroll="83" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="ERI-W1-PfD">
-                                                <rect key="frame" x="0.0" y="61.5" width="254.5" height="425.5"/>
+                                                <rect key="frame" x="0.0" y="62" width="255" height="425"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                <clipView key="contentView" id="x8e-tq-QfS">
-                                                    <rect key="frame" x="1" y="1" width="252.5" height="423.5"/>
+                                                <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="x8e-tq-QfS">
+                                                    <rect key="frame" x="1" y="1" width="253" height="423"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
-                                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="80" rowSizeStyle="automatic" viewBased="YES" id="mDn-vJ-DRu">
-                                                            <rect key="frame" x="0.0" y="0.0" width="252.5" height="423.5"/>
+                                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" columnReordering="NO" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="80" rowSizeStyle="automatic" viewBased="YES" id="mDn-vJ-DRu">
+                                                            <rect key="frame" x="0.0" y="0.0" width="253" height="423"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <size key="intercellSpacing" width="3" height="3"/>
-                                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="_sourceListBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                             <tableColumns>
                                                                 <tableColumn width="249.5" minWidth="40" maxWidth="1000" id="gfB-AZ-eGS">
@@ -268,11 +268,11 @@
                                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                                     <prototypeCellViews>
                                                                         <tableCellView identifier="ThreadCellID" id="icG-1R-u25" customClass="ThreadTableCellView" customModule="_chan_client" customModuleProvider="target">
-                                                                            <rect key="frame" x="1" y="1" width="249.5" height="80"/>
+                                                                            <rect key="frame" x="1" y="1" width="249" height="80"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                             <subviews>
                                                                                 <textField identifier="LabelPostSubject" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="anb-fT-J7g">
-                                                                                    <rect key="frame" x="89" y="58" width="153.5" height="22"/>
+                                                                                    <rect key="frame" x="89" y="58" width="153" height="22"/>
                                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="k8H-Cf-JRJ">
                                                                                         <font key="font" metaFont="systemMedium" size="18"/>
@@ -306,9 +306,10 @@
                                                             </tableColumns>
                                                         </tableView>
                                                     </subviews>
+                                                    <nil key="backgroundColor"/>
                                                 </clipView>
                                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="0C8-2W-h8k">
-                                                    <rect key="frame" x="1" y="429" width="251.5" height="16"/>
+                                                    <rect key="frame" x="1" y="429" width="252" height="16"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </scroller>
                                                 <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="PqA-IA-KtK">
@@ -323,7 +324,7 @@
                                         </holdingPriorities>
                                     </splitView>
                                     <customView fixedFrame="YES" id="iPR-7F-AsL">
-                                        <rect key="frame" x="255.5" y="0.0" width="628.5" height="487"/>
+                                        <rect key="frame" x="256" y="0.0" width="628" height="487"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </customView>
                                 </subviews>
