@@ -17,12 +17,10 @@ struct ChanHelper
     static func loadImage(board: String, time: String, ext: String, completionHandler: @escaping (NSImage) -> Void)
     {
         let url = "https://i.4cdn.org/\(board)/\(time)\(ext)"
-        print(url)
         Alamofire.request(url).validate().responseImage(completionHandler: { response in
             switch response.result
             {
             case .success(let value):
-                print(value)
                 completionHandler(value)
             case .failure(let error):
                 print (error)

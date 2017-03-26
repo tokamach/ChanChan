@@ -13,20 +13,40 @@ import AlamofireImage
 class ThreadListViewController: NSViewController {
 
     @IBOutlet weak var tableView: NSTableView!
+    @IBOutlet weak var boardTextField: NSTextField!
     
     var threadList: ChanCatalog?
+    var currentBoard = "c"
+    
+    @IBAction func loadButtonPressed(_ sender: Any) {
+        currentBoard = boardTextField.stringValue
+        reloadCatalog()
+        print(currentBoard)
+        print(threadList?.pages[0][0].subject)
+        DispatchQueue.main.async{
+            self.tableView.reloadData()
+        }
+
+    }
+    
+    func reloadCatalog()
+    {
+        ChanHelper.loadCatalog(board: currentBoard, completionHandler: { req in
+            self.threadList = req
+            self.tableView.delegate = self
+            self.tableView.dataSource = self
+
+        })
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
-        ChanHelper.loadCatalog(board: "c", completionHandler: { req in
-            self.threadList = req
-            self.tableView.delegate = self
-            self.tableView.dataSource = self
-        })
+        reloadCatalog()
     }
     
-    func tableView(_ tableView: NSTableView, heightOfRow row: Int) -> CGFloat {
+    func tableView(_ tableView: NSTableView, heightOfRow row: Int) -> CGFloat
+    {
         return 80
     }
 }
@@ -56,8 +76,9 @@ extension ThreadListViewController: NSTableViewDelegate
         if let cell = tableView.make(withIdentifier: "ThreadCellID", owner: nil) as? ThreadTableCellView
         {
             cell.textField?.stringValue = threadList!.pages[0][row].subject
+            cell.postContentLabel?.stringValue = threadList!.pages[0][row].content
             
-            ChanHelper.loadImage(board: "c",
+            ChanHelper.loadImage(board: currentBoard,
                                  time: threadList!.pages[0][row].time,
                                  ext: threadList!.pages[0][row].fileExt,
                                  completionHandler: { res in

@@ -11,6 +11,7 @@ import Cocoa
 class ThreadTableCellView: NSTableCellView {
 
     @IBOutlet weak var previewImageView: NSImageView!
+    @IBOutlet weak var postContentLabel: NSTextField!
     
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
