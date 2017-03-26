@@ -1,5 +1,5 @@
 //
-//  ThreadListViewController.swift
+//  ChanViewController.swift
 //  4chan-client
 //
 //  Created by Tom Hutchings on 25/03/2017.
@@ -10,18 +10,12 @@ import Cocoa
 import Alamofire
 import AlamofireImage
 
-class ThreadListViewController: NSViewController {
+class ChanViewController: NSViewController {
 
     @IBOutlet weak var tableView: NSTableView!
-    @IBOutlet weak var boardTextField: NSTextField!
     
     var threadList: ChanCatalog?
     var currentBoard = "c"
-    
-    @IBAction func loadButtonPressed(_ sender: Any) {
-        currentBoard = boardTextField.stringValue
-        reloadCatalog()
-    }
     
     func reloadCatalog()
     {
@@ -49,7 +43,7 @@ class ThreadListViewController: NSViewController {
     }
 }
 
-extension ThreadListViewController: NSTableViewDataSource
+extension ChanViewController: NSTableViewDataSource
 {
     func numberOfRows(in tableView: NSTableView) -> Int {
         if (self.threadList!.pages.count > 0)
@@ -63,8 +57,16 @@ extension ThreadListViewController: NSTableViewDataSource
     }
 }
 
-extension ThreadListViewController: NSTableViewDelegate
+extension ChanViewController: NSTableViewDelegate
 {
+    func tableViewSelectionDidChange(_ notification: Notification) {
+        if let table = notification.object as? NSTableView
+        {
+            let selected = table.selectedRowIndexes.map { Int($0) }
+            print(threadList!.pages[0][selected[0]].subject)
+        }
+    }
+    
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
         guard (threadList!.pages.count > 0) else
         {

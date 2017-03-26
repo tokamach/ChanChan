@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		E0A4B837D3011856239E5A8C /* Pods_4chan_client.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD21FCE3A6B8DA462333C8E5 /* Pods_4chan_client.framework */; };
 		E2986B601E85E2BA009DC792 /* util.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2986B5F1E85E2BA009DC792 /* util.swift */; };
-		E2B5686B1E87224A00A9EEBE /* ThreadListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B5686A1E87224A00A9EEBE /* ThreadListViewController.swift */; };
+		E2B5686B1E87224A00A9EEBE /* ChanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B5686A1E87224A00A9EEBE /* ChanViewController.swift */; };
 		E2B568701E8723F600A9EEBE /* ThreadTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B5686F1E8723F600A9EEBE /* ThreadTableCellView.swift */; };
 		E2ED9D371E85D49900B49B61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ED9D361E85D49900B49B61 /* AppDelegate.swift */; };
 		E2ED9D391E85D49900B49B61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ED9D381E85D49900B49B61 /* ViewController.swift */; };
@@ -22,7 +22,7 @@
 		BD21FCE3A6B8DA462333C8E5 /* Pods_4chan_client.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_4chan_client.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7664B7F5D605150F6C297CD /* Pods-4chan-client.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-4chan-client.debug.xcconfig"; path = "Pods/Target Support Files/Pods-4chan-client/Pods-4chan-client.debug.xcconfig"; sourceTree = "<group>"; };
 		E2986B5F1E85E2BA009DC792 /* util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = util.swift; sourceTree = "<group>"; };
-		E2B5686A1E87224A00A9EEBE /* ThreadListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadListViewController.swift; sourceTree = "<group>"; };
+		E2B5686A1E87224A00A9EEBE /* ChanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChanViewController.swift; sourceTree = "<group>"; };
 		E2B5686F1E8723F600A9EEBE /* ThreadTableCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadTableCellView.swift; sourceTree = "<group>"; };
 		E2ED9D331E85D49900B49B61 /* 4chan-client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "4chan-client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2ED9D361E85D49900B49B61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,7 +64,7 @@
 		E2B568691E8721DE00A9EEBE /* controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E2B5686A1E87224A00A9EEBE /* ThreadListViewController.swift */,
+				E2B5686A1E87224A00A9EEBE /* ChanViewController.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -232,7 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2B5686B1E87224A00A9EEBE /* ThreadListViewController.swift in Sources */,
+				E2B5686B1E87224A00A9EEBE /* ChanViewController.swift in Sources */,
 				E2986B601E85E2BA009DC792 /* util.swift in Sources */,
 				E2B568701E8723F600A9EEBE /* ThreadTableCellView.swift in Sources */,
 				E2ED9D391E85D49900B49B61 /* ViewController.swift in Sources */,
