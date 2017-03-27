@@ -13,7 +13,6 @@ import SwiftyJSON
 
 struct ChanHelper
 {
-    
     static func loadImage(board: String, time: String, ext: String, completionHandler: @escaping (NSImage) -> Void)
     {
         let url = "https://i.4cdn.org/\(board)/\(time)\(ext)"

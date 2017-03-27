@@ -279,7 +279,7 @@
                                             <nil key="backgroundColor"/>
                                         </clipView>
                                         <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="0C8-2W-h8k">
-                                            <rect key="frame" x="1" y="470" width="195.5" height="16"/>
+                                            <rect key="frame" x="1" y="470" width="196" height="16"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
                                         <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="PqA-IA-KtK">
@@ -311,7 +311,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-45" y="800.5"/>
+            <point key="canvasLocation" x="75" y="820"/>
         </scene>
     </scenes>
     <resources>

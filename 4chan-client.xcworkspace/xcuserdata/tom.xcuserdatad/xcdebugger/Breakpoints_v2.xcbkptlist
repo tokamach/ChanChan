@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "4chan-client/util.swift"
-            timestampString = "512178578.184001"
+            timestampString = "512303143.328328"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
             landmarkName = "loadThread(board:threadID:completionHandler:)"
             landmarkType = "7">
             <Locations>
