@@ -107,6 +107,61 @@ struct ChanPost
         
         lastReplies = nil
     }
+    
+    init(fromParams number: NSNumber, time: String, date: String, resTo: NSNumber, name: String,
+         subject: String, trip: String, fileName: String, fileExt: String, fileMD5: String, fileSize: NSNumber,
+         fileHeight: NSNumber, fileWidth: NSNumber, thumbHeight: NSNumber, thumbWidth: NSNumber, content: String)
+    {
+        self.number = number
+        self.time = time
+        self.date = date
+        self.resTo = resTo
+        
+        self.name = name
+        self.subject = subject
+        self.trip = trip
+        
+        // all file stuff needs conditional
+        self.fileName = fileName
+        self.fileExt = fileExt
+        self.fileMD5 = fileMD5
+        self.fileSize = fileSize
+        self.fileHeight = fileHeight
+        self.fileWidth = fileWidth
+        self.thumbHeight = thumbHeight
+        self.thumbWidth = thumbWidth
+        
+        self.content = content
+        
+        self.lastReplies = nil
+    }
+    
+    init(asDummy _: Any)
+    {
+        self.number = 0
+        self.time = "1"
+        self.date = "1/1/1980"
+        self.resTo = 0
+        
+        self.name = "Anon"
+        self.subject = "Some post"
+        self.trip = ""
+        
+        // all file stuff needs conditional
+        self.fileName = "weeby_photo"
+        self.fileExt = ".png"
+        self.fileMD5 = "123456789abcdef"
+        self.fileSize = 128
+        self.fileHeight = 512
+        self.fileWidth = 512
+        self.thumbHeight = 128
+        self.thumbWidth = 128
+        
+        self.content = "This is a test post."
+        
+        self.lastReplies = nil
+
+    }
 }
 
 // A thread on 4chan

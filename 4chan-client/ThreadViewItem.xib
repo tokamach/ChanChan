@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="ThreadViewItem" customModule="_chan_client" customModuleProvider="target">
+            <connections>
+                <outlet property="imageView" destination="anR-tg-Rxl" id="TJB-Wn-lBw"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView misplaced="YES" id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="252"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <imageView identifier="postImageID" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="anR-tg-Rxl">
+                    <rect key="frame" x="0.0" y="71" width="181" height="181"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="NSActionTemplate" id="xYK-QC-qPd"/>
+                </imageView>
+                <textField identifier="postTitleID" horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wzw-2m-qXC">
+                    <rect key="frame" x="199" y="206" width="283" height="46"/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Post Title" id="A3H-Kl-VDM">
+                        <font key="font" metaFont="system" size="18"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField identifier="postContentID" horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EW8-fj-KND">
+                    <rect key="frame" x="199" y="0.0" width="263" height="198"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Post Content" id="VDo-OQ-uoW">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="EW8-fj-KND" firstAttribute="leading" secondItem="anR-tg-Rxl" secondAttribute="trailing" constant="20" id="02g-Op-aqy"/>
+                <constraint firstItem="EW8-fj-KND" firstAttribute="top" secondItem="Wzw-2m-qXC" secondAttribute="bottom" constant="8" id="6DX-TR-mb9"/>
+                <constraint firstItem="EW8-fj-KND" firstAttribute="leading" secondItem="anR-tg-Rxl" secondAttribute="trailing" constant="20" id="EmL-FL-hS9"/>
+                <constraint firstItem="anR-tg-Rxl" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="G5Q-tQ-OJR"/>
+                <constraint firstItem="Wzw-2m-qXC" firstAttribute="leading" secondItem="anR-tg-Rxl" secondAttribute="trailing" constant="20" id="Qek-gy-yPE"/>
+                <constraint firstItem="Wzw-2m-qXC" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="V9f-Hg-YNz"/>
+                <constraint firstAttribute="bottom" secondItem="EW8-fj-KND" secondAttribute="bottom" constant="20" id="Wbf-0k-yoe"/>
+                <constraint firstAttribute="trailing" secondItem="EW8-fj-KND" secondAttribute="trailing" constant="20" id="av4-zY-dgk"/>
+                <constraint firstAttribute="trailing" secondItem="Wzw-2m-qXC" secondAttribute="trailing" id="fuS-9Q-jFZ"/>
+                <constraint firstItem="anR-tg-Rxl" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="ggG-9U-63a"/>
+                <constraint firstItem="EW8-fj-KND" firstAttribute="top" secondItem="Wzw-2m-qXC" secondAttribute="bottom" constant="8" id="pzS-1s-Ss6"/>
+                <constraint firstAttribute="bottom" secondItem="anR-tg-Rxl" secondAttribute="bottom" constant="71" id="x1E-ZR-GXu"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="261"/>
+        </customView>
+        <collectionViewItem id="whi-Im-Vws" customClass="ThreadViewItem" customModule="_chan_client" customModuleProvider="target"/>
+    </objects>
+    <resources>
+        <image name="NSActionTemplate" width="14" height="14"/>
+    </resources>
+</document>

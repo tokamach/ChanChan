@@ -11,6 +11,9 @@
 		E2986B601E85E2BA009DC792 /* util.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2986B5F1E85E2BA009DC792 /* util.swift */; };
 		E2B5686B1E87224A00A9EEBE /* ChanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B5686A1E87224A00A9EEBE /* ChanViewController.swift */; };
 		E2B568701E8723F600A9EEBE /* ThreadTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B5686F1E8723F600A9EEBE /* ThreadTableCellView.swift */; };
+		E2CE4D401E893E1F00638E39 /* ThreadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CE4D3F1E893E1F00638E39 /* ThreadViewController.swift */; };
+		E2CE4D431E89803400638E39 /* ThreadViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CE4D411E89803400638E39 /* ThreadViewItem.swift */; };
+		E2CE4D441E89803400638E39 /* ThreadViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2CE4D421E89803400638E39 /* ThreadViewItem.xib */; };
 		E2ED9D371E85D49900B49B61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ED9D361E85D49900B49B61 /* AppDelegate.swift */; };
 		E2ED9D391E85D49900B49B61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ED9D381E85D49900B49B61 /* ViewController.swift */; };
 		E2ED9D3B1E85D49900B49B61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2ED9D3A1E85D49900B49B61 /* Assets.xcassets */; };
@@ -24,6 +27,9 @@
 		E2986B5F1E85E2BA009DC792 /* util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = util.swift; sourceTree = "<group>"; };
 		E2B5686A1E87224A00A9EEBE /* ChanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChanViewController.swift; sourceTree = "<group>"; };
 		E2B5686F1E8723F600A9EEBE /* ThreadTableCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadTableCellView.swift; sourceTree = "<group>"; };
+		E2CE4D3F1E893E1F00638E39 /* ThreadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadViewController.swift; sourceTree = "<group>"; };
+		E2CE4D411E89803400638E39 /* ThreadViewItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadViewItem.swift; sourceTree = "<group>"; };
+		E2CE4D421E89803400638E39 /* ThreadViewItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThreadViewItem.xib; sourceTree = "<group>"; };
 		E2ED9D331E85D49900B49B61 /* 4chan-client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "4chan-client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2ED9D361E85D49900B49B61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2ED9D381E85D49900B49B61 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +70,7 @@
 		E2B568691E8721DE00A9EEBE /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E2CE4D3F1E893E1F00638E39 /* ThreadViewController.swift */,
 				E2B5686A1E87224A00A9EEBE /* ChanViewController.swift */,
 			);
 			name = controllers;
@@ -73,6 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				E2B5686F1E8723F600A9EEBE /* ThreadTableCellView.swift */,
+				E2CE4D411E89803400638E39 /* ThreadViewItem.swift */,
+				E2CE4D421E89803400638E39 /* ThreadViewItem.xib */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -173,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2ED9D3B1E85D49900B49B61 /* Assets.xcassets in Resources */,
+				E2CE4D441E89803400638E39 /* ThreadViewItem.xib in Resources */,
 				E2ED9D3E1E85D49900B49B61 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,7 +245,9 @@
 				E2B5686B1E87224A00A9EEBE /* ChanViewController.swift in Sources */,
 				E2986B601E85E2BA009DC792 /* util.swift in Sources */,
 				E2B568701E8723F600A9EEBE /* ThreadTableCellView.swift in Sources */,
+				E2CE4D431E89803400638E39 /* ThreadViewItem.swift in Sources */,
 				E2ED9D391E85D49900B49B61 /* ViewController.swift in Sources */,
+				E2CE4D401E893E1F00638E39 /* ThreadViewController.swift in Sources */,
 				E2ED9D371E85D49900B49B61 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

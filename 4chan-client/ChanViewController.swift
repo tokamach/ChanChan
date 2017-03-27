@@ -13,6 +13,7 @@ import AlamofireImage
 class ChanViewController: NSViewController {
 
     @IBOutlet weak var tableView: NSTableView!
+    @IBOutlet weak var threadViewController: ChanThreadView!
     
     var threadList: ChanCatalog?
     var currentBoard = "c"
@@ -33,13 +34,31 @@ class ChanViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
+
         reloadCatalog()
+        configureThreadView()
     }
     
     func tableView(_ tableView: NSTableView, heightOfRow row: Int) -> CGFloat
     {
         return 80
+    }
+    
+    private func configureThreadView()
+    {
+        let flowLayout = NSCollectionViewFlowLayout()
+        flowLayout.itemSize = NSSize(width: 160.0, height: 140.0)
+        //flowLayout.itemSize = NSSize(width: 0, height: 0)
+        flowLayout.sectionInset = EdgeInsets(top: 10.0, left: 20.0, bottom: 10.0, right: 20.0)
+        flowLayout.minimumInteritemSpacing = 20.0
+        flowLayout.minimumLineSpacing = 20.0
+        threadViewController.collectionViewLayout = flowLayout
+    }
+    
+    func showThread(thread: ChanThread)
+    {
+        print(thread.posts[0].subject)
+        threadViewController.reloadData()
     }
 }
 
@@ -63,7 +82,12 @@ extension ChanViewController: NSTableViewDelegate
         if let table = notification.object as? NSTableView
         {
             let selected = table.selectedRowIndexes.map { Int($0) }
-            print(threadList!.pages[0][selected[0]].subject)
+            let threadNum = threadList!.pages[0][selected[0]].number
+            ChanHelper.loadThread(board: currentBoard,
+                                  threadID: threadNum,
+                                  completionHandler: { res in
+                                    self.showThread(thread: res)
+            })
         }
     }
     
