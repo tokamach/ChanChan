@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
@@ -211,20 +211,20 @@
                                 <rect key="frame" x="0.0" y="0.0" width="884" height="487"/>
                                 <subviews>
                                     <scrollView wantsLayer="YES" fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="83" horizontalPageScroll="10" verticalLineScroll="83" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" id="ERI-W1-PfD">
-                                        <rect key="frame" x="0.0" y="0.0" width="252" height="487"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="869" height="487"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="x8e-tq-QfS">
-                                            <rect key="frame" x="1" y="1" width="250" height="485"/>
+                                            <rect key="frame" x="1" y="1" width="867" height="485"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" columnReordering="NO" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="80" rowSizeStyle="automatic" viewBased="YES" id="mDn-vJ-DRu">
-                                                    <rect key="frame" x="0.0" y="0.0" width="250" height="485"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="867" height="485"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <size key="intercellSpacing" width="3" height="3"/>
                                                     <color key="backgroundColor" name="_sourceListBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                     <tableColumns>
-                                                        <tableColumn width="247" minWidth="40" maxWidth="1000" id="gfB-AZ-eGS">
+                                                        <tableColumn width="864" minWidth="40" maxWidth="1000" id="gfB-AZ-eGS">
                                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
                                                                 <font key="font" metaFont="smallSystem"/>
                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -238,11 +238,11 @@
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             <prototypeCellViews>
                                                                 <tableCellView identifier="ThreadCellID" id="icG-1R-u25" customClass="ThreadTableCellView" customModule="_chan_client" customModuleProvider="target">
-                                                                    <rect key="frame" x="1" y="1" width="247" height="80"/>
+                                                                    <rect key="frame" x="1" y="1" width="864" height="80"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <textField identifier="LabelPostSubject" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="anb-fT-J7g">
-                                                                            <rect key="frame" x="89" y="58" width="151" height="22"/>
+                                                                            <rect key="frame" x="89" y="58" width="768" height="22"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                                             <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="k8H-Cf-JRJ">
                                                                                 <font key="font" metaFont="systemMedium" size="18"/>
@@ -287,33 +287,15 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
                                     </scrollView>
-                                    <scrollView wantsLayer="YES" fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="wQE-sO-1pB">
-                                        <rect key="frame" x="253" y="0.0" width="631" height="487"/>
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="CLW-lv-U8d">
+                                        <rect key="frame" x="870" y="0.0" width="14" height="487"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <clipView key="contentView" drawsBackground="NO" id="FUf-eU-Fk8">
-                                            <rect key="frame" x="1" y="1" width="629" height="485"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            <subviews>
-                                                <collectionView id="8t1-Bw-4H5" customClass="ChanThreadViewController" customModule="_chan_client" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="629" height="485"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                    <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="LB5-m6-Kaz">
-                                                        <size key="itemSize" width="50" height="50"/>
-                                                    </collectionViewFlowLayout>
-                                                    <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                </collectionView>
-                                            </subviews>
-                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                        </clipView>
-                                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="2a2-Pd-ZUr">
-                                            <rect key="frame" x="1" y="470" width="192.5" height="16"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </scroller>
-                                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="Oev-M6-vaI">
-                                            <rect key="frame" x="234" y="1" width="15" height="143"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </scroller>
-                                    </scrollView>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="500" id="OIu-hQ-nPI"/>
+                                            <constraint firstAttribute="height" constant="487" id="g98-Ai-ARI"/>
+                                        </constraints>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSActionTemplate" id="FHX-pq-aMg"/>
+                                    </imageView>
                                 </subviews>
                                 <holdingPriorities>
                                     <real value="250"/>
@@ -330,7 +312,7 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="mDn-vJ-DRu" id="fnM-qs-Fu6"/>
-                        <outlet property="threadViewController" destination="8t1-Bw-4H5" id="fOa-Cl-xJE"/>
+                        <outlet property="threadImageView" destination="CLW-lv-U8d" id="6KH-6h-cD8"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
