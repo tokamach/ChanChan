@@ -22,6 +22,10 @@ class ChanViewController: NSViewController {
     
     var curThread = ChanThread()
     
+    override var acceptsFirstResponder : Bool {
+        return true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,6 +38,11 @@ class ChanViewController: NSViewController {
     }
     
     override func keyDown(with event: NSEvent) {
+        if(event.isARepeat)
+        {
+            return
+        }
+        
         switch event.modifierFlags.intersection(.deviceIndependentFlagsMask) {
         case [.command] where event.characters == "j":
             threadNext()
@@ -42,6 +51,7 @@ class ChanViewController: NSViewController {
             
         case [.command] where event.characters == "k":
             threadPrev()
+            reloadImage()
             break
             
         default:
@@ -51,7 +61,7 @@ class ChanViewController: NSViewController {
     
     func threadNext()
     {
-        if (curPostIndex - 1 < curThread.posts.count)
+        if (curPostIndex + 1 < curThread.posts.count)
         {
             curPostIndex += 1
         }
@@ -117,7 +127,9 @@ extension ChanViewController: NSTableViewDelegate
         if let table = notification.object as? NSTableView
         {
             let selected = table.selectedRowIndexes.map { Int($0) }
-            let threadNum = threadList!.pages[0][selected[curPostIndex]].number
+            let threadNum = threadList!.pages[0][selected[0]].number
+            
+            self.curPostIndex = 0
             
             ChanHelper.loadThread(board: currentBoard,
                                   threadID: threadNum,
