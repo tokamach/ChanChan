@@ -35,8 +35,8 @@ class ChanViewController: NSViewController {
     override func keyDown(with event: NSEvent) {
         switch event.modifierFlags.intersection(.deviceIndependentFlagsMask) {
         case [.command] where event.characters == "j":
-            threadPrev()
-            showThread
+            theadPrev()
+            //showThread()
             break
             
         case [.command] where event.characters == "k":
@@ -50,7 +50,7 @@ class ChanViewController: NSViewController {
     
     func threadNext()
     {
-        if (curPostIndex - 1 < threadList?.pages[curThreadIndex].count)
+        if (curPostIndex - 1 < threadList!.pages[curThreadIndex].count)
         {
             curPostIndex += 1
         }

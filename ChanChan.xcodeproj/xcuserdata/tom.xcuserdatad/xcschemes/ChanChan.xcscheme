@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E2ED9D321E85D49900B49B61"
-               BuildableName = "4chan-client.app"
-               BlueprintName = "4chan-client"
-               ReferencedContainer = "container:4chan-client.xcodeproj">
+               BuildableName = "ChanChan.app"
+               BlueprintName = "ChanChan"
+               ReferencedContainer = "container:ChanChan.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E2ED9D321E85D49900B49B61"
-            BuildableName = "4chan-client.app"
-            BlueprintName = "4chan-client"
-            ReferencedContainer = "container:4chan-client.xcodeproj">
+            BuildableName = "ChanChan.app"
+            BlueprintName = "ChanChan"
+            ReferencedContainer = "container:ChanChan.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E2ED9D321E85D49900B49B61"
-            BuildableName = "4chan-client.app"
-            BlueprintName = "4chan-client"
-            ReferencedContainer = "container:4chan-client.xcodeproj">
+            BuildableName = "ChanChan.app"
+            BlueprintName = "ChanChan"
+            ReferencedContainer = "container:ChanChan.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E2ED9D321E85D49900B49B61"
-            BuildableName = "4chan-client.app"
-            BlueprintName = "4chan-client"
-            ReferencedContainer = "container:4chan-client.xcodeproj">
+            BuildableName = "ChanChan.app"
+            BlueprintName = "ChanChan"
+            ReferencedContainer = "container:ChanChan.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

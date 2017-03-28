@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B240188B313EB6898D0A3D60 /* Pods_ChanChan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 858240B665007112E0E2E118 /* Pods_ChanChan.framework */; };
 		E0A4B837D3011856239E5A8C /* Pods_4chan_client.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD21FCE3A6B8DA462333C8E5 /* Pods_4chan_client.framework */; };
 		E2986B601E85E2BA009DC792 /* util.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2986B5F1E85E2BA009DC792 /* util.swift */; };
 		E2B5686B1E87224A00A9EEBE /* ChanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B5686A1E87224A00A9EEBE /* ChanViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		858240B665007112E0E2E118 /* Pods_ChanChan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChanChan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B83C8A3D88D37C70759DAFD /* Pods-4chan-client.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-4chan-client.release.xcconfig"; path = "Pods/Target Support Files/Pods-4chan-client/Pods-4chan-client.release.xcconfig"; sourceTree = "<group>"; };
 		BD21FCE3A6B8DA462333C8E5 /* Pods_4chan_client.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_4chan_client.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7664B7F5D605150F6C297CD /* Pods-4chan-client.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-4chan-client.debug.xcconfig"; path = "Pods/Target Support Files/Pods-4chan-client/Pods-4chan-client.debug.xcconfig"; sourceTree = "<group>"; };
@@ -27,11 +29,13 @@
 		E2B5686F1E8723F600A9EEBE /* ThreadTableCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadTableCellView.swift; sourceTree = "<group>"; };
 		E2CE4D411E89803400638E39 /* ThreadViewItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadViewItem.swift; sourceTree = "<group>"; };
 		E2CE4D421E89803400638E39 /* ThreadViewItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThreadViewItem.xib; sourceTree = "<group>"; };
-		E2ED9D331E85D49900B49B61 /* 4chan-client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "4chan-client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2ED9D331E85D49900B49B61 /* ChanChan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChanChan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2ED9D361E85D49900B49B61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2ED9D3A1E85D49900B49B61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2ED9D3D1E85D49900B49B61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E2ED9D3F1E85D49900B49B61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2F08F539FA97384AC45F88F /* Pods-ChanChan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChanChan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChanChan/Pods-ChanChan.debug.xcconfig"; sourceTree = "<group>"; };
+		EE5ED0E84F8569BE973483DA /* Pods-ChanChan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChanChan.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChanChan/Pods-ChanChan.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +44,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0A4B837D3011856239E5A8C /* Pods_4chan_client.framework in Frameworks */,
+				B240188B313EB6898D0A3D60 /* Pods_ChanChan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				BD21FCE3A6B8DA462333C8E5 /* Pods_4chan_client.framework */,
+				858240B665007112E0E2E118 /* Pods_ChanChan.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -59,6 +65,8 @@
 			children = (
 				D7664B7F5D605150F6C297CD /* Pods-4chan-client.debug.xcconfig */,
 				9B83C8A3D88D37C70759DAFD /* Pods-4chan-client.release.xcconfig */,
+				E2F08F539FA97384AC45F88F /* Pods-ChanChan.debug.xcconfig */,
+				EE5ED0E84F8569BE973483DA /* Pods-ChanChan.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -83,7 +91,7 @@
 		E2ED9D2A1E85D49900B49B61 = {
 			isa = PBXGroup;
 			children = (
-				E2ED9D351E85D49900B49B61 /* 4chan-client */,
+				E2ED9D351E85D49900B49B61 /* ChanChan */,
 				E2ED9D341E85D49900B49B61 /* Products */,
 				BC951AA01F7492FDCB9A8ED2 /* Pods */,
 				4ED99413C73FCA40AFE995C9 /* Frameworks */,
@@ -93,12 +101,12 @@
 		E2ED9D341E85D49900B49B61 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E2ED9D331E85D49900B49B61 /* 4chan-client.app */,
+				E2ED9D331E85D49900B49B61 /* ChanChan.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E2ED9D351E85D49900B49B61 /* 4chan-client */ = {
+		E2ED9D351E85D49900B49B61 /* ChanChan */ = {
 			isa = PBXGroup;
 			children = (
 				E2B5686A1E87224A00A9EEBE /* ChanViewController.swift */,
@@ -110,15 +118,15 @@
 				E2ED9D3C1E85D49900B49B61 /* Main.storyboard */,
 				E2ED9D3F1E85D49900B49B61 /* Info.plist */,
 			);
-			path = "4chan-client";
+			path = ChanChan;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E2ED9D321E85D49900B49B61 /* 4chan-client */ = {
+		E2ED9D321E85D49900B49B61 /* ChanChan */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E2ED9D421E85D49900B49B61 /* Build configuration list for PBXNativeTarget "4chan-client" */;
+			buildConfigurationList = E2ED9D421E85D49900B49B61 /* Build configuration list for PBXNativeTarget "ChanChan" */;
 			buildPhases = (
 				D4881A15EADFE2E46740BC0D /* [CP] Check Pods Manifest.lock */,
 				E2ED9D2F1E85D49900B49B61 /* Sources */,
@@ -131,9 +139,9 @@
 			);
 			dependencies = (
 			);
-			name = "4chan-client";
+			name = ChanChan;
 			productName = "4chan-client";
-			productReference = E2ED9D331E85D49900B49B61 /* 4chan-client.app */;
+			productReference = E2ED9D331E85D49900B49B61 /* ChanChan.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -152,7 +160,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E2ED9D2E1E85D49900B49B61 /* Build configuration list for PBXProject "4chan-client" */;
+			buildConfigurationList = E2ED9D2E1E85D49900B49B61 /* Build configuration list for PBXProject "ChanChan" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -165,7 +173,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E2ED9D321E85D49900B49B61 /* 4chan-client */,
+				E2ED9D321E85D49900B49B61 /* ChanChan */,
 			);
 		};
 /* End PBXProject section */
@@ -196,7 +204,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-4chan-client/Pods-4chan-client-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChanChan/Pods-ChanChan-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8D0AE6D6964ADBA4996C3739 /* [CP] Embed Pods Frameworks */ = {
@@ -211,7 +219,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-4chan-client/Pods-4chan-client-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChanChan/Pods-ChanChan-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D4881A15EADFE2E46740BC0D /* [CP] Check Pods Manifest.lock */ = {
@@ -350,11 +358,11 @@
 		};
 		E2ED9D431E85D49900B49B61 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D7664B7F5D605150F6C297CD /* Pods-4chan-client.debug.xcconfig */;
+			baseConfigurationReference = E2F08F539FA97384AC45F88F /* Pods-ChanChan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "4chan-client/Info.plist";
+				INFOPLIST_FILE = ChanChan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tokamach.ChanChan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -364,11 +372,11 @@
 		};
 		E2ED9D441E85D49900B49B61 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9B83C8A3D88D37C70759DAFD /* Pods-4chan-client.release.xcconfig */;
+			baseConfigurationReference = EE5ED0E84F8569BE973483DA /* Pods-ChanChan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "4chan-client/Info.plist";
+				INFOPLIST_FILE = ChanChan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tokamach.ChanChan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -379,7 +387,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E2ED9D2E1E85D49900B49B61 /* Build configuration list for PBXProject "4chan-client" */ = {
+		E2ED9D2E1E85D49900B49B61 /* Build configuration list for PBXProject "ChanChan" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E2ED9D401E85D49900B49B61 /* Debug */,
@@ -388,7 +396,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E2ED9D421E85D49900B49B61 /* Build configuration list for PBXNativeTarget "4chan-client" */ = {
+		E2ED9D421E85D49900B49B61 /* Build configuration list for PBXNativeTarget "ChanChan" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E2ED9D431E85D49900B49B61 /* Debug */,
