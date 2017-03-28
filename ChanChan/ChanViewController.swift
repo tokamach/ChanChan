@@ -18,8 +18,9 @@ class ChanViewController: NSViewController {
     var threadList: ChanCatalog?
     var currentBoard = "c"
     
-    var curThreadIndex = 0
     var curPostIndex = 0
+    
+    var curThread = ChanThread()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,12 +36,12 @@ class ChanViewController: NSViewController {
     override func keyDown(with event: NSEvent) {
         switch event.modifierFlags.intersection(.deviceIndependentFlagsMask) {
         case [.command] where event.characters == "j":
-            theadPrev()
-            //showThread()
+            threadNext()
+            reloadImage()
             break
             
         case [.command] where event.characters == "k":
-            threadNext()
+            threadPrev()
             break
             
         default:
@@ -50,13 +51,13 @@ class ChanViewController: NSViewController {
     
     func threadNext()
     {
-        if (curPostIndex - 1 < threadList!.pages[curThreadIndex].count)
+        if (curPostIndex - 1 < curThread.posts.count)
         {
             curPostIndex += 1
         }
     }
     
-    func theadPrev()
+    func threadPrev()
     {
         if (curPostIndex > 0)
         {
@@ -83,12 +84,12 @@ class ChanViewController: NSViewController {
         return 80
     }
     
-    func showThread(thread: ChanThread)
+    func reloadImage()
     {
-        print(thread.posts[0].subject)
+        print(curThread.posts[0].subject)
         ChanHelper.loadImage(board: currentBoard,
-                             time: thread.posts[curPostIndex].time,
-                             ext: thread.posts[0].fileExt,
+                             time: curThread.posts[curPostIndex].time,
+                             ext: curThread.posts[curPostIndex].fileExt,
                              completionHandler: { res in
                                 self.threadImageView?.image = res
         })
@@ -121,9 +122,11 @@ extension ChanViewController: NSTableViewDelegate
             ChanHelper.loadThread(board: currentBoard,
                                   threadID: threadNum,
                                   completionHandler: { res in
-                                    self.curPostIndex = 0
-                                    self.showThread(thread: res)
+                                    self.curThread = res
+                                    self.reloadImage();
+
             })
+            
         }
     }
     
@@ -135,14 +138,14 @@ extension ChanViewController: NSTableViewDelegate
         
         if let cell = tableView.make(withIdentifier: "ThreadCellID", owner: nil) as? ThreadTableCellView
         {
-            curThreadIndex = row
+            //curThreadIndex = row
 
-            cell.textField?.stringValue = threadList!.pages[0][curThreadIndex].subject
-            cell.postContentLabel?.stringValue = threadList!.pages[0][curThreadIndex].content
+            cell.textField?.stringValue = threadList!.pages[0][row].subject
+            cell.postContentLabel?.stringValue = threadList!.pages[0][row].content
             
             ChanHelper.loadImage(board: currentBoard,
-                                 time: threadList!.pages[0][curThreadIndex].time,
-                                 ext: threadList!.pages[0][curThreadIndex].fileExt,
+                                 time: threadList!.pages[0][row].time,
+                                 ext: threadList!.pages[0][row].fileExt,
                                  completionHandler: { res in
                 cell.previewImageView?.image = res
             })

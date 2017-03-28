@@ -11,6 +11,15 @@ import Alamofire
 import AlamofireImage
 import SwiftyJSON
 
+struct ChanState
+{
+    //var currentThreadIndex // index in catalog, bad idea
+    var currentThreadID = 0
+    var posInThread = 0
+    
+    
+}
+
 struct ChanHelper
 {
     static func loadImage(board: String, time: String, ext: String, completionHandler: @escaping (NSImage) -> Void)
