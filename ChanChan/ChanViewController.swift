@@ -116,7 +116,7 @@ extension ChanViewController: NSTableViewDelegate
         if let table = notification.object as? NSTableView
         {
             let selected = table.selectedRowIndexes.map { Int($0) }
-            let threadNum = threadList!.pages[0][selected[posInThread]].number
+            let threadNum = threadList!.pages[0][selected[curPostIndex]].number
             
             ChanHelper.loadThread(board: currentBoard,
                                   threadID: threadNum,

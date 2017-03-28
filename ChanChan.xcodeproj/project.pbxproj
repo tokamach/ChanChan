@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B240188B313EB6898D0A3D60 /* Pods_ChanChan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 858240B665007112E0E2E118 /* Pods_ChanChan.framework */; };
-		E0A4B837D3011856239E5A8C /* Pods_4chan_client.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD21FCE3A6B8DA462333C8E5 /* Pods_4chan_client.framework */; };
 		E2986B601E85E2BA009DC792 /* util.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2986B5F1E85E2BA009DC792 /* util.swift */; };
 		E2B5686B1E87224A00A9EEBE /* ChanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B5686A1E87224A00A9EEBE /* ChanViewController.swift */; };
 		E2B568701E8723F600A9EEBE /* ThreadTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B5686F1E8723F600A9EEBE /* ThreadTableCellView.swift */; };
@@ -43,7 +42,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0A4B837D3011856239E5A8C /* Pods_4chan_client.framework in Frameworks */,
 				B240188B313EB6898D0A3D60 /* Pods_ChanChan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
